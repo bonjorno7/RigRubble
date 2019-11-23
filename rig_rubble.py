@@ -87,6 +87,9 @@ class RigRubble(bpy.types.Operator):
             mod.use_vertex_groups = True
             mod.object = arm_obj
 
+            # Parent the object to the armature
+            obj.parent = arm_obj
+
         # Tell the user what we did
         self.report({'INFO'}, f"Rigged {len(mesh_objs)} object(s)")
 
